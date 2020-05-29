@@ -1,0 +1,42 @@
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+    <div class="field is-horizontal">
+        <div class="field-body">
+
+            <div class="field">
+                <p class="control">
+                    <input type="text" required name="pokemon" style="width: 100px; border-color: red;" class="input"
+                        placeholder="Name" [ngModel]="item.pokemon">
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control">
+                    <input type="number" required name="atk" style="width: 100px; border-color: red;" class="input"
+                        placeholder="ATK" [ngModel]="item.atk">
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control">
+                    <input type="number" required name="def" style="width: 100px; border-color: red;" class="input"
+                        placeholder="DEF" [ngModel]="item.def">
+                </p>
+            </div>
+
+            <div class="field">
+                <p class="control">
+                    <input type="number" required name="hp" style="width: 100px; border-color: red;" class="input"
+                        placeholder="HP" [ngModel]="item.hp">
+                </p>
+            </div>
+
+            <div class="field">
+                <button type="submit" class="button" style="background-color: red;" [ngClass]=" { 'is-primary': isNewItem, 'is-success': !isNewItem }"
+                    [disabled]="!itemForm.valid">
+                    <p *ngIf="isNewItem">Add</p>
+                    <p *ngIf="!isNewItem">Save</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

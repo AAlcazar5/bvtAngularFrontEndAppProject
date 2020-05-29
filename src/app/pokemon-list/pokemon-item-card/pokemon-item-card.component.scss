@@ -1,0 +1,97 @@
+@import '../../../main-styles.scss';
+
+.root {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+    &:hover {
+        .x-icon-button {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .x-icon-button {
+        position: absolute;
+        height: 38px; 
+        width: 38px;
+        border-radius: 50%; 
+        background: black;
+        background-image: url('../../../assets/delete_icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        right: -17px;
+        top: -17px;
+
+        transition: opacity 0.2 ease-out, transform 0.2s ease-out;
+
+        transform: scale(0);
+        opacity: 0;
+
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+    }
+
+
+}
+
+.pokemon-item {
+    display: flex;
+    width: 100%;
+    background-color: $gold;
+    color: white;
+    border-radius: 5px;
+    max-width: 800px;
+    cursor: pointer;
+    font-weight: 1000px;
+    margin-left: 8px;
+    margin-right: 12px;
+
+    .name {
+        display: flex;
+        flex-grow: 1; 
+        font-size: 20px;
+        margin-left: 10px;
+        align-items: center;
+    }
+
+    .atk {
+        display: flex;
+        flex-grow: 1; 
+        font-size: 20px;
+        margin-left: 5px;
+
+        align-items: center;
+
+    }
+    
+    .def {
+        display: flex;
+        flex-grow: 1; 
+        font-size: 20px;
+        margin-left: 5px;
+
+        align-items: center;
+
+    }
+    
+    .hp {
+        display: flex;
+        flex-grow: 1; 
+        font-size: 20px;
+        margin-left: 5px;
+
+        align-items: center;
+    }
+
+    transition: background-color 0.2s ease-out;
+    &:hover {
+        background-color: darken($light-grey, 5%);
+    }
+
+}

@@ -1,0 +1,20 @@
+<div class="top-bar">
+    <h1>My Pokemon Go Team 3</h1>
+  </div>
+  <section class="add-pokemon-section">
+    <div class="add-pokemon-container">
+      <app-add-pokemon-form style="padding: 20px;" (formSubmit)="addItem($event)"></app-add-pokemon-form>
+    </div>
+  </section>
+  
+  <hr style="margin-top: 10; background-color: red;">
+  
+  <div class="dropdown">
+    <button class="dropbtn" style="background-color: #FF0000;">Manage Pokemon</button>
+    <div class="dropdown-content">
+      <a style="cursor: pointer;" (click)="onSaveData()">Save</a>
+      <a style="cursor: pointer;" (click)="onFetchData()">Fetch Data</a>
+    </div>
+  </div>
+  
+  <app-pokemon-list [pokemonItems]="pokemonItems" (delete)="deleteItem($event)"></app-pokemon-list>

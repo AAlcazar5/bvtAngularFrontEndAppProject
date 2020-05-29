@@ -1,0 +1,22 @@
+  <div class="root">
+     
+    <div class="pokemon-item columns is-mobile" (click)="onCardClick()">
+        <div class="column name">
+          <p>{{ item.pokemon }}</p>
+        </div>
+        <div class="column atk">
+          <p>{{ item.atk }}</p>
+        </div> 
+        <div class="column def"> 
+          <p>{{ item.def }}</p>
+        </div>
+        <div class="column hp">
+          <p>{{ item.hp }}</p>
+        </div>
+      </div>
+
+      <div class="x-icon-button" (click)="onXButtonClick()">
+
+      </div>
+
+  </div>

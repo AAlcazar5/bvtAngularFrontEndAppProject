@@ -1,0 +1,46 @@
+@import '../../main-styles.scss';
+
+.pokemon-items-section {
+    display: flex;
+    padding: 30px;
+    $widescreen: false;
+
+    justify-content: center;
+    align-items: center;
+
+    .pokemon-items-container {
+        display: flex;
+        max-width: 800px;
+        height: 100%;
+        width: 100%;
+
+        .pokemon-column {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 0;
+            flex-grow: 1;
+
+        h1 {
+            font-family: 'Roboto';
+            font-size: 25px;
+            font-weight: 900;
+            text-transform: uppercase;
+            }
+
+            .budget-items {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+        }
+
+    .pokemon-column {
+        margin-right: 35px;
+
+        h1 {
+            color: blue;
+        }
+    }
+    }
+}

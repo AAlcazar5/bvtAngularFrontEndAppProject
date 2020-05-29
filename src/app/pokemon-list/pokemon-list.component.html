@@ -1,0 +1,18 @@
+<section class="pokemon-items-section">
+    <div class="pokemon-items-container">
+
+        <div class="pokemon-column">
+
+            <div class="pokemon-items">
+                <div *ngFor="let item of pokemonItems">
+                    <app-pokemon-item-card
+                        *ngIf="item.atk >= 0 && item.atk <= 100 || item.def >= 0 && item.def <= 100  || item.hp >= 0 && item.hp <= 100"
+                        [item]="item" (xButtonClick)="onDelete(item)" (cardClick)="onCardClicked(item)"
+                        style="display:block; margin-bottom:20px">
+                    </app-pokemon-item-card>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
