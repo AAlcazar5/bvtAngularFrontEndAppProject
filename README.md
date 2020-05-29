@@ -1,3 +1,7 @@
+# PokemonGo Team Tracker
+Front end app focused app made with Angular for Bay Valley Tech. Meant to get acquainted with Angular before exploring backends and APIs.
+
+
 # AngularFirstProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
